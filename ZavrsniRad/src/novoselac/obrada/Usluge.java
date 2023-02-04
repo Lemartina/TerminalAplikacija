@@ -42,13 +42,37 @@ public class Usluge {
 	
 	private void odabirIzbornika() {
 	switch (Pomocno.UnosBrojRaspon("Odaberi opciju", 1, 5)) {
-	
+	case 1:
+		pregled();
+		case 2:
+		unosNovog();
 	case 5:
 		start.glavniIzbornik();
-		break;
+	
 	}
 	
 }
+	
+
+	private void pregled() {
+		System.out.println("Usluge u aplikaciji");
+		for(Usluga u: usluge) {
+			System.out.println(u);
+		}
+		izbornik();
+	}
+
+	private void unosNovog() {
+		usluge.add(unesiNovuUslugu());
+		izbornik();
+	}
+
+	private Usluga unesiNovuUslugu() {
+		Usluga u=new Usluga();
+		u.setSifra(Pomocno.UnosBrojRaspon("Unesi šifru usluge: ", 1, Integer.MAX_VALUE));
+		u.setNaziv(Pomocno.unosTeksta("Unesi naziv usluge"));
+		return u;
+	}
 
 	//geteri i seteri
 	public List<Usluga> getUsluge() {
