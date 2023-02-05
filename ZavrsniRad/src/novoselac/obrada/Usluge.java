@@ -21,9 +21,18 @@ public class Usluge {
 	//puni konstruktor	
 	public Usluge(Start start, List<Usluga> usluge) {
 		super();
+		
 		this.start=start;
 		this.usluge = usluge;
+		testPodaci();
 	}
+private void testPodaci() {
+		if(Pomocno.DEV) {
+			usluge.add(new Usluga(1, "rođendaonica", null, null))
+		}
+		
+}
+
 //izbornik usluge
 	
 	public void izbornik() {

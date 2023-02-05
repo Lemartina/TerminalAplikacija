@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Pomocno {
 
 	public static Scanner ulaz;
+	public static boolean DEV;
 
 	public static int UnosBrojRaspon(String poruka, int min, int max) {
 		int i;
