@@ -2,17 +2,20 @@ package novoselac;
 
 import java.util.Scanner;
 
+import novoselac.obrada.Djeca;
 import novoselac.obrada.Usluge;
 
 public class Start {
 	
 	private Usluge usluge;
+	private Djeca djeca;
 	
 	public Start() {
 		
-		
+		//start kanalizira u određene druge klase
 		Pomocno.ulaz= new Scanner(System.in);
 		usluge= new Usluge(this);
+		djeca=new Djeca(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 		
@@ -36,6 +39,8 @@ private void odabirGavnogIzbornika() {
 	case 1:
 		usluge.izbornik();
 		break;
+	case 3:
+		djeca.izbornik();
 	case 5:
 		System.out.println("Doviđenja!");
 	}

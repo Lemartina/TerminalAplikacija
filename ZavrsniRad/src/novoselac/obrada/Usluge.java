@@ -44,8 +44,10 @@ public class Usluge {
 	switch (Pomocno.UnosBrojRaspon("Odaberi opciju", 1, 5)) {
 	case 1:
 		pregled();
+		break;
 		case 2:
 		unosNovog();
+		break;
 	case 5:
 		start.glavniIzbornik();
 	
