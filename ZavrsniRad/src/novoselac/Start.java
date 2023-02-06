@@ -3,12 +3,15 @@ package novoselac;
 import java.util.Scanner;
 
 import novoselac.obrada.Djeca;
+import novoselac.obrada.Djelatnici;
 import novoselac.obrada.Usluge;
 
 public class Start {
 	
 	private Usluge usluge;
 	private Djeca djeca;
+	private Djelatnici djelatnici;
+	
 	
 	public Start() {
 		
@@ -16,6 +19,7 @@ public class Start {
 		Pomocno.ulaz= new Scanner(System.in);
 		usluge= new Usluge(this);
 		djeca=new Djeca(this);
+		djelatnici= new Djelatnici(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 		
