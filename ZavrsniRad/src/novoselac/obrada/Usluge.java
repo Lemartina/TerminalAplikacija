@@ -9,8 +9,6 @@ import novoselac.model.Usluga;
 
 public class Usluge {
 	private List<Usluga> usluge;
-	private Start start; //kreiranje veze između usluge i starta
-	
 	//prazni kornstruktor
 	public Usluge(Start start) {
 		super();
