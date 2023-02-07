@@ -47,6 +47,9 @@ private void odabirGavnogIzbornika() {
 	case 1:
 		usluge.izbornik();
 		break;
+	case 2:
+		posjete.izbornik();
+		break;
 	case 3:
 		djeca.izbornik();
 	case 5:
