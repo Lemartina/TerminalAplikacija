@@ -17,6 +17,7 @@ public class Djeca {
 		super();
 		this.start = start;
 		djeca = new ArrayList<>();
+		testPodaci();
 
 	}
 
@@ -25,7 +26,18 @@ public class Djeca {
 		super();
 		this.djeca = djeca;
 		this.start = start;
+		testPodaci();
 	}
+
+private void testPodaci() {
+	if(Pomocno.DEV) {
+		djeca.add(new Dijete(1, "Marko", "Marković", "Ivana", "091/236-5236"));
+		djeca.add(new Dijete(2, "Luka", "Ivanković", "Marija", "097/125-5246"));
+		djeca.add(new Dijete(3, "Josipa", "Josipović", "Gabrijel", "098/259-3265"));
+	
+	}
+	
+}
 
 //izbornik djeca
 
