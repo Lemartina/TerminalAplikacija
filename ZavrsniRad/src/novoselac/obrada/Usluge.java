@@ -1,5 +1,6 @@
 package novoselac.obrada;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,16 @@ public class Usluge {
 		super();
 		this.start = start;
 		usluge = new ArrayList<>();
+		testPodaci();
+	}
+	
+	private void testPodaci() {
+		if(Pomocno.DEV) {
+			usluge.add(new Usluga(1, "Rođendan", new BigDecimal(20.00), "sat",new BigDecimal(5.00)));
+			usluge.add(new Usluga(1, "Dnevno čuvanje", new BigDecimal(10.00), "sat",new BigDecimal(1.00)));
+			usluge.add(new Usluga(1, "Tiskanje pozivnica", new BigDecimal(1.00), "kom",new BigDecimal(20.00)));
+		}
+		
 	}
 
 	// puni konstruktor
@@ -27,14 +38,9 @@ public class Usluge {
 		testPodaci();
 	}
 
-	private void testPodaci() {
-//		if(Pomocno.DEV) {
-//			usluge.add(new Usluga(1,"rođendaonica", "250.25", "sat","1.30"));
-//			usluge.add(new Usluga());
-//		}
-//		
-	}
 
+	
+	
 //izbornik usluge
 
 	public void izbornik() {
