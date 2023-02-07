@@ -22,7 +22,7 @@ public class Djelatnici {
 		this.djelatnici = djelatnici;
 	}
 
-	//konstruktor
+	//prazni konstruktor
 	public Djelatnici(Start start) {
 		super();
 		this.start = start;
