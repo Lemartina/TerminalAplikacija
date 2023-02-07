@@ -2,8 +2,10 @@ package novoselac;
 
 import java.util.Scanner;
 
+
 import novoselac.obrada.Djeca;
 import novoselac.obrada.Djelatnici;
+import novoselac.obrada.Posjete;
 import novoselac.obrada.Usluge;
 
 public class Start {
@@ -11,6 +13,7 @@ public class Start {
 	private Usluge usluge;
 	private Djeca djeca;
 	private Djelatnici djelatnici;
+	private Posjete posjete;
 	
 	
 	public Start() {
@@ -20,6 +23,7 @@ public class Start {
 		usluge= new Usluge(this);
 		djeca=new Djeca(this);
 		djelatnici= new Djelatnici(this);
+		posjete= new Posjete(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 		
