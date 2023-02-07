@@ -60,7 +60,7 @@ public class Posjete {
 			pregled(true);
 			break;
 		case 2:
-//				unosNovog();
+			unosNovog();
 			break;
 		case 3:
 //				if (usluge.size() == 0) {
@@ -83,6 +83,13 @@ public class Posjete {
 
 		}
 
+	}
+
+	private void unosNovog() {
+//		Posjeta p = new Posjeta();
+//		p.setSifra(Pomocno.UnosBrojRaspon("Unesi sifru posjete", 1, Integer.MAX_VALUE));
+//		p.set
+		
 	}
 
 	// pregled izbornika
