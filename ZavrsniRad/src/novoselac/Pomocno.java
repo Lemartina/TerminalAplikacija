@@ -15,7 +15,7 @@ public class Pomocno {
 				System.out.println(poruka);
 				i = Integer.parseInt(ulaz.nextLine());
 				if (i < min || i > max) {
-					System.out.println("Broj mora biti između " + min + "i" + max);
+					System.out.print("Broj mora biti između " + min + "i" + max);
 					continue;
 				}
 				return i;
