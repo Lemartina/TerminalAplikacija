@@ -6,6 +6,7 @@ import java.util.List;
 import novoselac.Pomocno;
 import novoselac.Start;
 import novoselac.model.Dijete;
+import novoselac.model.Usluga;
 
 public class Djeca {
 
@@ -56,7 +57,7 @@ private void testPodaci() {
 	private void odabirIzbornika() {
 		switch (Pomocno.UnosBrojRaspon("Odaberi opciju", 1, 5)) {
 		case 1:
-//			pregled();
+			pregled(true);
 			break;
 			case 2:
 //			unosNovog();
@@ -66,6 +67,22 @@ private void testPodaci() {
 		
 		}
 		
+	}
+	
+	
+	public void pregled(boolean prikaziIzbornik) {
+		System.out.println("Djeca u aplikaciji");
+		int rb = 1;
+		for (Dijete d : djeca) {
+			System.out.println(rb++ + "." + d);
+
+		}
+
+		System.out.println("**************************");
+		if (prikaziIzbornik) {
+			izbornik();
+		}
+
 	}
 //geteri i seteri
 	public List<Dijete> getDjeca() {
