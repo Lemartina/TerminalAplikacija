@@ -87,11 +87,28 @@ public class Posjete {
 //ovo nije dobro treba unijeti datum posjete i odabrati djelantika, djelatnike ne ispisuje dobro
 	private void unosNovog() {
 		Posjeta p = new Posjeta();
-		p.setSifra(Pomocno.UnosBrojRaspon("Unesi datum i vrijeme posjete: ", 1, Integer.MAX_VALUE));
+		p.setSifra(Pomocno.UnosBrojRaspon("Unesi datum i vrijeme posjete: ",
+				1, Integer.MAX_VALUE));
 		start.getDjelatnici().pregled(false);
 		int rb = Pomocno.UnosBrojRaspon("Odaberite djelatnika za posjetu", 1,
 				start.getDjelatnici().getDjelatnici().size());
 		p.setDjelatnik(start.getDjelatnici().getDjelatnici().get(rb - 1));
+		
+		while(true) {
+			start.getDjeca().pregled(false);
+			rb = Pomocno.UnosBrojRaspon("Odaberite dijete za dodavanje posjete", 
+					1, start.getDjeca().getDjeca().size());
+			if(Pomocno.UnosBrojRaspon("0 za kraj dodavanje djeteta", 
+					0, Integer.MAX_VALUE)==0);{
+				break;
+			}
+					
+					
+
+		}
+		
+		
+		
 		posjete.add(p);
 		izbornik();
 
