@@ -15,7 +15,17 @@ public class Start {
 	private Djelatnici djelatnici;
 	private Posjete posjete;
 	
-	
+	// geteri zbog viljivosti
+	public Djeca getDjeca() {
+		return djeca;
+	}
+
+
+	public Djelatnici getDjelatnici() {
+		return djelatnici;
+	}
+
+
 	public Start() {
 		
 		//start kanalizira u određene druge klase
@@ -43,7 +53,7 @@ public void glavniIzbornik() {
 }
 private void odabirGavnogIzbornika() {
 	
-	switch(Pomocno.UnosBrojRaspon("Odabrana opcija;",1,5)) {
+	switch(Pomocno.UnosBrojRaspon("Odabrana opcija: ",1,5)) {
 	case 1:
 		usluge.izbornik();
 		break;
