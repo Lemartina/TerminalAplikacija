@@ -60,5 +60,9 @@ public class Posjeta extends Entitet {
 		this.djeca = djeca;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return datumVrijemeDolaska + "(" + djelatnik.getIme()  + djelatnik.getPrezime() + ")";
+	}
 }
