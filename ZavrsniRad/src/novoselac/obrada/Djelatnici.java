@@ -97,4 +97,10 @@ public class Djelatnici {
 			}
 
 		}
+		
+	
+		public void izbornik() {
+			System.out.println("");
+			System.out.println("Djelatnici izbornik");			
+		}
 }
