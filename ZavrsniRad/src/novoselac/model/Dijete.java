@@ -48,6 +48,11 @@ public class Dijete extends Entitet {
 		this.telefonRoditelja = telefonRoditelja;
 	}
 	
+	@Override
+	public String toString() {
+		
+		return ime +" "+ prezime;
+	}
 	
 	
 	

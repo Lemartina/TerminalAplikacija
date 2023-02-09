@@ -19,15 +19,6 @@ public class Usluge {
 		usluge = new ArrayList<>();
 		testPodaci();
 	}
-	
-	private void testPodaci() {
-		if(Pomocno.DEV) {
-			usluge.add(new Usluga(1, "Rođendan", new BigDecimal(20.00), "sat",new BigDecimal(5.00)));
-			usluge.add(new Usluga(1, "Dnevno čuvanje", new BigDecimal(10.00), "sat",new BigDecimal(1.00)));
-			usluge.add(new Usluga(1, "Tiskanje pozivnica", new BigDecimal(1.00), "kom",new BigDecimal(20.00)));
-		}
-		
-	}
 
 	// puni konstruktor
 	public Usluge(Start start, List<Usluga> usluge) {
@@ -38,9 +29,16 @@ public class Usluge {
 		testPodaci();
 	}
 
+	// testni podaci
+	private void testPodaci() {
+		if (Pomocno.DEV) {
+			usluge.add(new Usluga(1, "Rođendan", new BigDecimal(20.00), "sat", new BigDecimal(5.00)));
+			usluge.add(new Usluga(1, "Dnevno čuvanje", new BigDecimal(10.00), "sat", new BigDecimal(1.00)));
+			usluge.add(new Usluga(1, "Tiskanje pozivnica", new BigDecimal(1.00), "kom", new BigDecimal(20.00)));
+		}
 
-	
-	
+	}
+
 //izbornik usluge
 
 	public void izbornik() {
@@ -77,7 +75,7 @@ public class Usluge {
 				izbornik();
 			} else {
 				brisanje();
-			 }
+			}
 			break;
 		case 5:
 			start.glavniIzbornik();
@@ -86,6 +84,7 @@ public class Usluge {
 
 	}
 
+	// case 4
 	private void brisanje() {
 		pregled(false);
 		int rb = Pomocno.UnosBrojRaspon("Odaberite uslugu koju želite obrisati: ", 1, usluge.size());
@@ -93,6 +92,7 @@ public class Usluge {
 		izbornik();
 	}
 
+// case 3
 	private void promjena() {
 		pregled(false);
 		int rb = Pomocno.UnosBrojRaspon("Odaberite uslugu koju želite promjeniti: ", 1, usluge.size());
@@ -100,7 +100,22 @@ public class Usluge {
 		u.setNaziv(Pomocno.unosTeksta("Unesite naziv smjera: "));
 		izbornik();
 	}
+	
+	//case 2
+		private void unosNovog() {
+			usluge.add(unesiNovuUslugu());
+			izbornik();
+		}
 
+		private Usluga unesiNovuUslugu() {
+			Usluga u = new Usluga();
+			u.setSifra(Pomocno.UnosBrojRaspon("Unesi šifru usluge: ", 1, Integer.MAX_VALUE));
+			u.setNaziv(Pomocno.unosTeksta("Unesi naziv usluge"));
+			return u;
+		}
+
+
+//case 1
 	private void pregled(boolean prikaziIzbornik) {
 		System.out.println("Usluge u aplikaciji");
 		int rb = 1;
@@ -116,17 +131,6 @@ public class Usluge {
 
 	}
 
-	private void unosNovog() {
-		usluge.add(unesiNovuUslugu());
-		izbornik();
-	}
-
-	private Usluga unesiNovuUslugu() {
-		Usluga u = new Usluga();
-		u.setSifra(Pomocno.UnosBrojRaspon("Unesi šifru usluge: ", 1, Integer.MAX_VALUE));
-		u.setNaziv(Pomocno.unosTeksta("Unesi naziv usluge"));
-		return u;
-	}
 
 	// geteri i seteri
 	public List<Usluga> getUsluge() {

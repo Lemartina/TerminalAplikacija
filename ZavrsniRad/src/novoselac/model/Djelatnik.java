@@ -55,6 +55,10 @@ public class Djelatnik extends Entitet {
 		this.radnoMjesto = radnoMjesto;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return ime+ " "+ prezime;
+	}
 	
 }
