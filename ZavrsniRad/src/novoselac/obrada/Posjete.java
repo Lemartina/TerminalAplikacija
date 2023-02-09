@@ -63,20 +63,20 @@ public class Posjete {
 			unosNovog();
 			break;
 		case 3:
-//				if (usluge.size() == 0) {
-//					System.out.println("Nema smjerova koje" + " bi mijenjali");
-//					izbornik();
-//				} else {
-//					promjena();
-//				}
+				if (posjete.size() == 0) {
+					System.out.println("Nema posjete koju bi mijenjali");
+					izbornik();
+				} else {
+					promjena();
+				}
 			break;
 		case 4:
-//				if (usluge.size() == 0) {
-//					System.out.println("Nema smjerova koje" + " bi brisali");
-//					izbornik();
-//				} else {
-//					brisanje();
-//				 }
+				if (posjete.size() == 0) {
+					System.out.println("Nema temina koje bi brisali");
+					izbornik();
+				} else {
+					brisanje();
+				 }
 			break;
 		case 5:
 			start.glavniIzbornik();
@@ -84,6 +84,26 @@ public class Posjete {
 		}
 
 	}
+	
+	//case 4
+	
+	private void brisanje() {
+		pregled(false);
+		int rb = Pomocno.UnosBrojRaspon("Odaberite termin koji želite obrisati: ", 1, posjete.size());
+		posjete.remove(rb - 1);
+		izbornik();
+	}
+
+	//case3
+private void promjena() {
+//	pregled(false);
+//	int rb = Pomocno.UnosBrojRaspon("Odaberite termin koju želite promjeniti: ", 1, usluge.size());
+//	Posjeta e = posjete.get(rb - 1);
+//	e.setNaziv(Pomocno.unosTeksta("Unesite datum i vijeme dolaska: "));
+	izbornik();
+		
+	}
+
 //ovo nije dobro treba unijeti datum posjete i odabrati djelantika, djelatnike ne ispisuje dobro
 	private void unosNovog() {
 		Posjeta p = new Posjeta();

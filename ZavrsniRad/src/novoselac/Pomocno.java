@@ -1,5 +1,6 @@
 package novoselac;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Pomocno {
@@ -7,6 +8,8 @@ public class Pomocno {
 	public static Scanner ulaz;
 	public static boolean DEV;
 
+	
+	//unos brojeva
 	public static int UnosBrojRaspon(String poruka, int min, int max) {
 		int i;
 
@@ -26,6 +29,8 @@ public class Pomocno {
 		}
 	}
 
+	
+	//unos teksta
 	public static String unosTeksta(String poruka) {
 		String u;
 		while (true) {
@@ -41,6 +46,13 @@ public class Pomocno {
 	
 	}
 
+//unos datuma
 
+	
 
+		
+	}
+	
+	
+	
 }
