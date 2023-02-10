@@ -10,6 +10,7 @@ import novoselac.model.Djelatnik;
 import novoselac.model.Usluga;
 
 public class Djelatnici {
+	
 	private List<Djelatnik> djelatnici;
 	private Start start;
 
@@ -29,6 +30,7 @@ public class Djelatnici {
 		djelatnici = new ArrayList<>();
 		testPodaci();
 	}
+	//testni podaci
 
 	private void testPodaci() {
 		djelatnici.add(new Djelatnik(1, "Ivana ", "Ivković", "93197060481", "HR7325000098193449454", "animator"));

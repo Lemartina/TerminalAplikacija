@@ -57,7 +57,6 @@ public class Djelatnik extends Entitet {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return ime+ " "+ prezime;
 	}
 	

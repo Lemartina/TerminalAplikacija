@@ -62,7 +62,6 @@ public class Posjeta extends Entitet {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return datumVrijemeDolaska + "(" + djelatnik.getIme()  + djelatnik.getPrezime() + ")";
 	}
 }

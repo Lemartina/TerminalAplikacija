@@ -13,6 +13,16 @@ public class Djeca {
 	private List<Dijete> djeca;
 	private Start start;
 
+	
+	//geteri i seteri
+		public List<Dijete> getDjeca() {
+			return djeca;
+		}
+
+		public void setDjeca(List<Dijete> djeca) {
+			this.djeca = djeca;
+		}
+	
 	// prazni konstruktor
 	public Djeca(Start start) {
 		super();
@@ -23,21 +33,20 @@ public class Djeca {
 	}
 
 //puni konstruktor
-	public Djeca(Start start, List<Dijete> djeca) {
-		super();
-		this.djeca = djeca;
-		this.start = start;
-		testPodaci();
-	}
+//	public Djeca(Start start, List<Dijete> djeca) {
+//		super();
+//		this.djeca = djeca;
+//		this.start = start;
+//		testPodaci();
+//	}
 
 // testni podaci
 	private void testPodaci() {
-		if (Pomocno.DEV) {
+		
 			djeca.add(new Dijete(1, "Marko", "Marković", "Ivana", "091/236-5236"));
 			djeca.add(new Dijete(2, "Luka", "Ivanković", "Marija", "097/125-5246"));
 			djeca.add(new Dijete(3, "Josipa", "Josipović", "Gabrijel", "098/259-3265"));
 
-		}
 
 	}
 
@@ -137,13 +146,6 @@ public class Djeca {
 
 	}
 
-//geteri i seteri
-	public List<Dijete> getDjeca() {
-		return djeca;
-	}
 
-	public void setDjeca(List<Dijete> djeca) {
-		this.djeca = djeca;
-	}
 
 }

@@ -1,6 +1,8 @@
 package novoselac.obrada;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import novoselac.Pomocno;
@@ -96,19 +98,20 @@ public class Posjete {
 
 	//case3
 private void promjena() {
-//	pregled(false);
-//	int rb = Pomocno.UnosBrojRaspon("Odaberite termin koju želite promjeniti: ", 1, usluge.size());
-//	Posjeta e = posjete.get(rb - 1);
-//	e.setNaziv(Pomocno.unosTeksta("Unesite datum i vijeme dolaska: "));
+	pregled(false);
+	Date dt = Pomocno.datumiDateFormat("Odaberite termin koju želite promjeniti: ");
+	Posjeta e = posjete.get(0);
+	e.setDatumVrijemeDolaska(Pomocno.datumiDateFormat("Unesite datum i vijeme dolaska: "));
 	izbornik();
 		
 	}
 
-//ovo nije dobro treba unijeti datum posjete i odabrati djelantika, djelatnike ne ispisuje dobro
-	private void unosNovog() {
+//case 2 ovo nije dobro treba unijeti datum posjete 
+private void unosNovog() {
 		Posjeta p = new Posjeta();
-		p.setSifra(Pomocno.UnosBrojRaspon("Unesi datum i vrijeme posjete: ",
-				1, Integer.MAX_VALUE));
+		p.setDatumVrijemeDolaska(Pomocno.datumiDateFormat("Unesite datum i vrijeme dolaska: "));
+		p.setDatumVrijemeOdlaska(Pomocno.datumiDateFormat("Unesite datum i vrijeme odlaska: "));
+		p.setNapomena(Pomocno.unosTeksta("Unesite napomenu: "));
 		start.getDjelatnici().pregled(false);
 		int rb = Pomocno.UnosBrojRaspon("Odaberite djelatnika za posjetu", 1,
 				start.getDjelatnici().getDjelatnici().size());
@@ -134,7 +137,7 @@ private void promjena() {
 
 	}
 
-	// pregled izbornika
+	// case 1
 	private void pregled(boolean prikaziIzbornik) {
 		System.out.println("Posjete u aplikaciji");
 		int rb = 1;

@@ -1,5 +1,6 @@
 package novoselac;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -8,7 +9,18 @@ public class Pomocno {
 	public static Scanner ulaz;
 	public static boolean DEV;
 
+	//unos datuma
 	
+	public static SimpleDateFormat datumiDateFormat(SimpleDateFormat date) {
+		SimpleDateFormat df = 
+				new SimpleDateFormat("dd. MMMM. yyyy. HH:mm:ss");
+		
+		System.out.println("Unesite datum: ");
+		System.out.println(df);
+		return df;
+	}
+	
+		
 	//unos brojeva
 	public static int UnosBrojRaspon(String poruka, int min, int max) {
 		int i;
@@ -46,13 +58,11 @@ public class Pomocno {
 	
 	}
 
-//unos datuma
 
+	public static Date datumiDateFormat(String date) {
 	
-
-		
+		return null;
 	}
-	
-	
+
 	
 }
