@@ -11,15 +11,20 @@ public class Pomocno {
 
 	//unos datuma
 	
-	public static SimpleDateFormat datumiDateFormat(SimpleDateFormat date) {
+	public static Date unosDatuma() {
 		SimpleDateFormat df = 
 				new SimpleDateFormat("dd. MMMM. yyyy. HH:mm:ss");
 		
 		System.out.println("Unesite datum: ");
-		System.out.println(df);
-		return df;
+		
+		try {
+			return df.parse(ulaz.nextLine());
+			} catch (Exception e) {
+			
+		return new Date();
+		
+		}
 	}
-	
 		
 	//unos brojeva
 	public static int UnosBrojRaspon(String poruka, int min, int max) {
@@ -58,11 +63,6 @@ public class Pomocno {
 	
 	}
 
-
-	public static Date datumiDateFormat(String date) {
-	
-		return null;
-	}
 
 	
 }

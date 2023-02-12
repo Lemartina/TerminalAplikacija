@@ -34,7 +34,7 @@ public class Posjete {
 
 	private void testPodaci() {
 		if (Pomocno.DEV) {
-//			posjete.add(new Posjeta(1, "2022-05-01 13:00:00", "2022-05-01 14:00:00", 2));
+//			posjete.add(new Posjeta(1, Pomocno.unosDatuma(01,05,2022,13,00,00), Pomocno.unosDatuma(01,05,2022,14,00,00), 2));
 //			posjete.add(new Posjeta(1, "2022-06-01 14:00:00", "2022-05-01 19:00:00", 1));
 //			posjete.add(new Posjeta(1, "2022-07-01 09:00:00", "2022-05-01 11:00:00", 3));
 
@@ -99,9 +99,9 @@ public class Posjete {
 	//case3
 private void promjena() {
 	pregled(false);
-	Date dt = Pomocno.datumiDateFormat("Odaberite termin koju želite promjeniti: ");
+	Date dt = Pomocno.unosDatuma();
 	Posjeta e = posjete.get(0);
-	e.setDatumVrijemeDolaska(Pomocno.datumiDateFormat("Unesite datum i vijeme dolaska: "));
+	e.setDatumVrijemeDolaska(Pomocno.unosDatuma());
 	izbornik();
 		
 	}
@@ -109,8 +109,8 @@ private void promjena() {
 //case 2 ovo nije dobro treba unijeti datum posjete 
 private void unosNovog() {
 		Posjeta p = new Posjeta();
-		p.setDatumVrijemeDolaska(Pomocno.datumiDateFormat("Unesite datum i vrijeme dolaska: "));
-		p.setDatumVrijemeOdlaska(Pomocno.datumiDateFormat("Unesite datum i vrijeme odlaska: "));
+		p.setDatumVrijemeDolaska(Pomocno.unosDatuma());
+		p.setDatumVrijemeOdlaska(Pomocno.unosDatuma());
 		p.setNapomena(Pomocno.unosTeksta("Unesite napomenu: "));
 		start.getDjelatnici().pregled(false);
 		int rb = Pomocno.UnosBrojRaspon("Odaberite djelatnika za posjetu", 1,

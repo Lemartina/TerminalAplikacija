@@ -14,7 +14,7 @@ public class Start {
 	private Djelatnici djelatnici;
 	private Posjete posjete;
 
-	// geteri zbog viljivosti
+	// geteri zbog vidljivosti
 	public Djeca getDjeca() {
 		return djeca;
 	}
