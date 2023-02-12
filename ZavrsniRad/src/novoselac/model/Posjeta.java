@@ -10,17 +10,18 @@ public class Posjeta extends Entitet {
 	private Date datumVrijemeOdlaska;
 	private String napomena;
 	private Djelatnik djelatnik;
-	private List<Dijete> djeca;
+	private Dijete djeca;
+	
 	
 	
 	//prazni konstruktor
 	public Posjeta() {
 		super();
-		djeca= new ArrayList<>();
+		
 	}
 	// puni konstruktor
 	public Posjeta(int sifra, Date datumVrijemeDolaska, Date datumVrijemeOdlaska, String napomena, Djelatnik djelatnik,
-			List<Dijete> djeca) {
+			Dijete djeca) {
 		super(sifra);
 		this.datumVrijemeDolaska = datumVrijemeDolaska;
 		this.datumVrijemeOdlaska = datumVrijemeOdlaska;
@@ -29,6 +30,7 @@ public class Posjeta extends Entitet {
 		this.djeca = djeca;
 	}
 	//geteri i seteri
+
 	public Date getDatumVrijemeDolaska() {
 		return datumVrijemeDolaska;
 	}
@@ -53,13 +55,12 @@ public class Posjeta extends Entitet {
 	public void setDjelatnik(Djelatnik djelatnik) {
 		this.djelatnik = djelatnik;
 	}
-	public List<Dijete> getDjeca() {
+	public Dijete getDjeca() {
 		return djeca;
 	}
-	public void setDjeca(List<Dijete> djeca) {
+	public void setDjeca(Dijete djeca) {
 		this.djeca = djeca;
 	}
-	
 	@Override
 	public String toString() {
 		return datumVrijemeDolaska + "(" + djelatnik.getIme()  + djelatnik.getPrezime() + ")";

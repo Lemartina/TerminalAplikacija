@@ -1,7 +1,9 @@
 package novoselac;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Pomocno {
@@ -13,9 +15,10 @@ public class Pomocno {
 	
 	public static Date unosDatuma() {
 		SimpleDateFormat df = 
-				new SimpleDateFormat("dd. MMMM. yyyy. HH:mm:ss");
+				new SimpleDateFormat("dd. MM. yyyy. HH:mm:ss");
 		
-		System.out.println("Unesite datum: ");
+		
+		System.out.println("Unesite datum i vrijeme: ");
 		
 		try {
 			return df.parse(ulaz.nextLine());
@@ -26,6 +29,26 @@ public class Pomocno {
 		}
 	}
 		
+	
+	
+	//unos datuma drugi način
+//	public static Date unosDatuma(String poruka, int dan, int mjesec, int godina
+////			, int sat, int minuta, int sekunda
+//			) {
+//		GregorianCalendar gc = (GregorianCalendar) Calendar.getInstance();
+//		gc.set(Calendar.DAY_OF_MONTH, dan);
+//		gc.set(Calendar.MONTH, mjesec-1);
+//		gc.set(Calendar.YEAR, godina);
+////		gc.set(Calendar.HOUR, sat);
+////		gc.set(Calendar.MINUTE, minuta);
+////		gc.set(Calendar.SECOND, sekunda);
+//		
+//		return gc.getTime();
+//	}
+	
+//	
+	
+	
 	//unos brojeva
 	public static int UnosBrojRaspon(String poruka, int min, int max) {
 		int i;

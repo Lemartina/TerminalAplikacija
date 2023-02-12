@@ -34,8 +34,8 @@ public class Posjete {
 
 	private void testPodaci() {
 		if (Pomocno.DEV) {
-//			posjete.add(new Posjeta(1, Pomocno.unosDatuma(01,05,2022,13,00,00), Pomocno.unosDatuma(01,05,2022,14,00,00), 2));
-//			posjete.add(new Posjeta(1, "2022-06-01 14:00:00", "2022-05-01 19:00:00", 1));
+//			posjete.add(new Posjeta(1, Pomocno.unosDatuma(01,02,23 15:16:00), Pomocno.unosDatuma(), "Dijete grize", "Ivna Mačković", "Petra Perković");
+//			posjete.add(new Posjeta();
 //			posjete.add(new Posjeta(1, "2022-07-01 09:00:00", "2022-05-01 11:00:00", 3));
 
 		}
