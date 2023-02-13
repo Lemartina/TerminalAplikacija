@@ -7,6 +7,7 @@ import java.util.List;
 
 import novoselac.Pomocno;
 import novoselac.Start;
+import novoselac.model.Dijete;
 import novoselac.model.Posjeta;
 import novoselac.model.Usluga;
 
@@ -34,9 +35,9 @@ public class Posjete {
 
 	private void testPodaci() {
 		if (Pomocno.DEV) {
-//			posjete.add(new Posjeta(1, Pomocno.unosDatuma(01,02,23 15:16:00), Pomocno.unosDatuma(), "Dijete grize", "Ivna Mačković", "Petra Perković");
-//			posjete.add(new Posjeta();
-//			posjete.add(new Posjeta(1, "2022-07-01 09:00:00", "2022-05-01 11:00:00", 3));
+//			posjete.add(new Posjeta(1, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize","Maja","Marinković" , new Dijete(1, "Marko", "Marković", "Ivana", "091/236-5236")));
+			posjete.add(new Posjeta());
+			posjete.add(new Posjeta());
 
 		}
 
@@ -99,9 +100,10 @@ public class Posjete {
 	//case3
 private void promjena() {
 	pregled(false);
-	Date dt = Pomocno.unosDatuma();
-	Posjeta e = posjete.get(0);
-	e.setDatumVrijemeDolaska(Pomocno.unosDatuma());
+	int rb = Pomocno.UnosBrojRaspon("Odaberite posjetu koju želite promjeniti: ", 1, posjete.size());
+	Posjeta p = posjete.get(rb - 1);
+	p.setDatumVrijemeDolaska(Pomocno.unosDatuma());
+	
 	izbornik();
 		
 	}
@@ -110,7 +112,7 @@ private void promjena() {
 private void unosNovog() {
 		Posjeta p = new Posjeta();
 		p.setDatumVrijemeDolaska(Pomocno.unosDatuma());
-		p.setDatumVrijemeOdlaska(Pomocno.unosDatuma());
+		p.setDatumVrijemeOdlaska(Pomocno.unosDatuma1());
 		p.setNapomena(Pomocno.unosTeksta("Unesite napomenu: "));
 		start.getDjelatnici().pregled(false);
 		int rb = Pomocno.UnosBrojRaspon("Odaberite djelatnika za posjetu", 1,
