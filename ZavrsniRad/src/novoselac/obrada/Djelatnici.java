@@ -37,7 +37,9 @@ public class Djelatnici {
 		djelatnici
 				.add(new Djelatnik(2, "Marina ", "Marković", "26403646008", "HR5723400095351463692", "teta čuvalica"));
 		djelatnici.add(new Djelatnik(3, "Petar ", "Marinić", "81890337429", "HR3923600008751454128", "animator"));
+	
 	}
+	
 
 	// izbornik djelatnici
 
