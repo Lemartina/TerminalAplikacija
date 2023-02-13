@@ -18,7 +18,7 @@ public class Pomocno {
 				new SimpleDateFormat("dd. MM. yyyy. HH:mm:ss");
 		
 		
-		System.out.println("Unesite datum i vrijeme: ");
+		System.out.println("Unesite datum i vrijeme dolaska: ");
 		
 		try {
 			return df.parse(ulaz.nextLine());
@@ -29,23 +29,38 @@ public class Pomocno {
 		}
 	}
 		
+	public static Date unosDatuma1() {
+		SimpleDateFormat df = 
+				new SimpleDateFormat("dd. MM. yyyy. HH:mm:ss");
+		
+		
+		System.out.println("Unesite datum i vrijeme odlaska: ");
+		
+		try {
+			return df.parse(ulaz.nextLine());
+			} catch (Exception e) {
+			
+		return new Date();
+		
+		}
+	}
 	
 	
 	//unos datuma drugi način
 //	public static Date unosDatuma(String poruka, int dan, int mjesec, int godina
-////			, int sat, int minuta, int sekunda
+//			, int sat, int minuta
 //			) {
 //		GregorianCalendar gc = (GregorianCalendar) Calendar.getInstance();
 //		gc.set(Calendar.DAY_OF_MONTH, dan);
 //		gc.set(Calendar.MONTH, mjesec-1);
 //		gc.set(Calendar.YEAR, godina);
-////		gc.set(Calendar.HOUR, sat);
-////		gc.set(Calendar.MINUTE, minuta);
-////		gc.set(Calendar.SECOND, sekunda);
+//		gc.set(Calendar.HOUR, sat);
+//		gc.set(Calendar.MINUTE, minuta);
+//		
 //		
 //		return gc.getTime();
 //	}
-	
+//	
 //	
 	
 	
