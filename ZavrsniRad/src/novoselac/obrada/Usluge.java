@@ -6,6 +6,7 @@ import java.util.List;
 
 import novoselac.Pomocno;
 import novoselac.Start;
+import novoselac.model.Djelatnik;
 import novoselac.model.Usluga;
 
 public class Usluge {
@@ -31,11 +32,10 @@ public class Usluge {
 
 	// testni podaci
 	private void testPodaci() {
-		if (Pomocno.DEV) {
-			usluge.add(new Usluga(1, "Rođendan", new BigDecimal(20.00), "sat", new BigDecimal(5.00)));
+		usluge.add(new Usluga(1, "Rođendan", new BigDecimal(20.00), "sat", new BigDecimal(5.00)));
 			usluge.add(new Usluga(1, "Dnevno čuvanje", new BigDecimal(10.00), "sat", new BigDecimal(1.00)));
 			usluge.add(new Usluga(1, "Tiskanje pozivnica", new BigDecimal(1.00), "kom", new BigDecimal(20.00)));
-		}
+		
 
 	}
 
@@ -63,7 +63,7 @@ public class Usluge {
 			break;
 		case 3:
 			if (usluge.size() == 0) {
-				System.out.println("Nema smjerova koje" + " bi mijenjali");
+				System.out.println("Nema usluge koju" + " bi mijenjali");
 				izbornik();
 			} else {
 				promjena();
@@ -71,7 +71,7 @@ public class Usluge {
 			break;
 		case 4:
 			if (usluge.size() == 0) {
-				System.out.println("Nema smjerova koje" + " bi brisali");
+				System.out.println("Nema usluge koju" + " bi brisali");
 				izbornik();
 			} else {
 				brisanje();
@@ -97,7 +97,7 @@ public class Usluge {
 		pregled(false);
 		int rb = Pomocno.UnosBrojRaspon("Odaberite uslugu koju želite promjeniti: ", 1, usluge.size());
 		Usluga u = usluge.get(rb - 1);
-		u.setNaziv(Pomocno.unosTeksta("Unesite naziv smjera: "));
+		u.setNaziv(Pomocno.unosTeksta("Unesite naziv usluge: "));
 		izbornik();
 	}
 	
@@ -116,20 +116,20 @@ public class Usluge {
 
 
 //case 1
-	private void pregled(boolean prikaziIzbornik) {
-		System.out.println("Usluge u aplikaciji");
-		int rb = 1;
-		for (Usluga u : usluge) {
-			System.out.println(rb++ + "." + u);
+		public void pregled(boolean prikaziIzbornik) {
+			System.out.println("Usluge u aplikaciji");
+			int rb = 1;
+			for (Usluga u : usluge) {
+				System.out.println(rb++ + "." + u);
+
+			}
+
+			System.out.println("**************************");
+			if (prikaziIzbornik) {
+				izbornik();
+			}
 
 		}
-
-		System.out.println("**************************");
-		if (prikaziIzbornik) {
-			izbornik();
-		}
-
-	}
 
 
 	// geteri i seteri

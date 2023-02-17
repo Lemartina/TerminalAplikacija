@@ -129,6 +129,7 @@ public class Djelatnici {
 		return m;
 	}
 
+	//case 1
 	public void pregled(boolean prikaziIzbornik) {
 		System.out.println("Djelatnici u aplikaciji");
 		int rb = 1;

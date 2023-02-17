@@ -8,6 +8,7 @@ import java.util.List;
 import novoselac.Pomocno;
 import novoselac.Start;
 import novoselac.model.Dijete;
+import novoselac.model.Djelatnik;
 import novoselac.model.Posjeta;
 import novoselac.model.Usluga;
 
@@ -34,12 +35,12 @@ public class Posjete {
 	}
 
 	private void testPodaci() {
-		if (Pomocno.DEV) {
-//			posjete.add(new Posjeta(1, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize","Maja","Marinković" , new Dijete(1, "Marko", "Marković", "Ivana", "091/236-5236")));
-			posjete.add(new Posjeta());
-			posjete.add(new Posjeta());
 
-		}
+//			posjete.add(new Posjeta(1, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize","Maja","Marinković" , new Dijete(1, "Marko", "Marković", "Ivana", "091/236-5236")));
+//			posjete.add(new Posjeta(2, Pomocno.unosDatuma(), Pomocno.unosDatuma1(),"dijete grebe", new Djelatnik(1, "Ivana ", "Ivković", "93197060481", "HR7325000098193449454", "animator"),new Dijete(1, "Marko", "Marković", "Ivana", "091/236-5236")));
+//			posjete.add(new Posjeta()));
+
+		
 
 	}
 
