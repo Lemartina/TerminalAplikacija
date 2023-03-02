@@ -1,5 +1,6 @@
 package novoselac.obrada;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -36,9 +37,21 @@ public class Posjete {
 
 	private void testPodaci() {
 
-//			posjete.add(new Posjeta(1, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize","Maja","Marinković" , new Dijete(1, "Marko", "Marković", "Ivana", "091/236-5236")));
-//			posjete.add(new Posjeta(2, Pomocno.unosDatuma(), Pomocno.unosDatuma1(),"dijete grebe", new Djelatnik(1, "Ivana ", "Ivković", "93197060481", "HR7325000098193449454", "animator"),new Dijete(1, "Marko", "Marković", "Ivana", "091/236-5236")));
-//			posjete.add(new Posjeta()));
+//			posjete.add(new Posjeta(1, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize",
+//					new Djelatnik(1, "Ivana ", "Ivković", "93197060481", "HR7325000098193449454", "animator"), 
+//					start.getDjeca().getDjeca().subList(1, 3), 
+//					start.getUsluge().getUsluge().subList(1, 3)));
+//			
+//			posjete.add(new Posjeta(2, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize",
+//					new Djelatnik(2, "Marina ", "Marković", "26403646008", "HR5723400095351463692", "teta čuvalica"), 
+//					start.getDjeca().getDjeca().subList(1, 3), 
+//					start.getUsluge().getUsluge().subList(1, 3)));
+//			
+//			posjete.add(new Posjeta(3, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize",
+//					new Djelatnik(3, "Petar ", "Marinić", "81890337429", "HR3923600008751454128", "animator"), 
+//					start.getDjeca().getDjeca().subList(1, 3), 
+//					start.getUsluge().getUsluge().subList(1, 3)));
+		
 
 		
 
@@ -120,7 +133,16 @@ private void unosNovog() {
 				start.getDjelatnici().getDjelatnici().size());
 		p.setDjelatnik(start.getDjelatnici().getDjelatnici().get(rb - 1));
 		
+		
+		
+		start.getUsluge().pregled(false);
+		 rb = Pomocno.UnosBrojRaspon("Odaberite uslugu za posjetu", 1,
+				start.getUsluge().getUsluge().size());
+//		p.setUsluga(start.getUsluge()).getUsluge().get(rb - 1));
+		
 		while(true) {
+			
+			
 			start.getDjeca().pregled(false);
 			rb = Pomocno.UnosBrojRaspon("Odaberite dijete za dodavanje posjete", 
 					1, start.getDjeca().getDjeca().size());

@@ -15,7 +15,7 @@ public class Pomocno {
 	
 	public static Date unosDatuma() {
 		SimpleDateFormat df = 
-				new SimpleDateFormat("dd. MM. yyyy. HH:mm:ss");
+				new SimpleDateFormat("dd.MM.yyyy.HH:mm:ss");
 		
 		
 		System.out.println("Unesite datum i vrijeme dolaska: ");
@@ -24,18 +24,18 @@ public class Pomocno {
 			return df.parse(ulaz.nextLine());
 			} catch (Exception e) {
 			
-		return new Date();
+		return new Date();//ako se ne unese dobar datum vraća tekući
 		
 		}
 	}
 		
 	public static Date unosDatuma1() {
 		SimpleDateFormat df = 
-				new SimpleDateFormat("dd. MM. yyyy. HH:mm:ss");
+				new SimpleDateFormat("dd.MM.yyyy.HH:mm:ss");
 		
 		
 		System.out.println("Unesite datum i vrijeme odlaska: ");
-		
+		while(true) {
 		try {
 			return df.parse(ulaz.nextLine());
 			} catch (Exception e) {
@@ -44,7 +44,7 @@ public class Pomocno {
 		
 		}
 	}
-	
+	}
 	
 	//unos datuma drugi način
 //	public static Date unosDatuma(String poruka, int dan, int mjesec, int godina

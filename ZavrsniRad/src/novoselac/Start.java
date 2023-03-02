@@ -22,6 +22,10 @@ public class Start {
 	public Djelatnici getDjelatnici() {
 		return djelatnici;
 	}
+	
+	public Usluge getUsluge() {
+		return usluge;
+	}
 
 	public Start() {
 
