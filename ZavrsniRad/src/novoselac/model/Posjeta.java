@@ -15,11 +15,7 @@ public class Posjeta extends Entitet {
 	private List<Usluga>usluge;
 	
 	
-	
-
-
-	
-	//prazni konstruktor
+		//prazni konstruktor
 	public Posjeta() {
 		super();
 		djeca= new ArrayList<>();
