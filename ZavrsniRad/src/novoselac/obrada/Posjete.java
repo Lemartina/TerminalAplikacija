@@ -35,6 +35,7 @@ public class Posjete {
 		testPodaci();
 	}
 
+	//test podaci
 	private void testPodaci() {
 
 //			posjete.add(new Posjeta(1, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize",
@@ -51,7 +52,7 @@ public class Posjete {
 //					new Djelatnik(3, "Petar ", "Marinić", "81890337429", "HR3923600008751454128", "animator"), 
 //					start.getDjeca().getDjeca().subList(1, 3), 
 //					start.getUsluge().getUsluge().subList(1, 3)));
-		
+//		
 
 		
 
