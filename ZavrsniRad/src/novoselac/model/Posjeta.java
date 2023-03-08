@@ -78,7 +78,6 @@ public class Posjeta extends Entitet {
 	
 	@Override
 	public String toString() {
-		return datumVrijemeDolaska  +  "(" + djelatnik.getIme()  + djelatnik.getPrezime()+" "+ 
-				 napomena +" " + usluge+ ")";
+		return datumVrijemeDolaska  +  "(" + djelatnik.getIme()  + djelatnik.getPrezime()+ ")";
 	}
 }

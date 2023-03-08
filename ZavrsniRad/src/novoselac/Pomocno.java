@@ -13,55 +13,55 @@ public class Pomocno {
 
 	//unos datuma
 	
-	public static Date unosDatuma() {
-		SimpleDateFormat df = 
-				new SimpleDateFormat("dd.MM.yyyy.HH:mm:ss");
+//	public static Date unosDatuma() {
+//		SimpleDateFormat df = 
+//				new SimpleDateFormat("dd.MM.yyyy.HH:mm:ss");
+//		
+//		
+//		System.out.println("Unesite datum i vrijeme dolaska: ");
+//		
+//		try {
+//			return df.parse(ulaz.nextLine());
+//			} catch (Exception e) {
+//			
+//		return new Date();//ako se ne unese dobar datum vraća tekući
+//		
+//		}
+//	}
 		
-		
-		System.out.println("Unesite datum i vrijeme dolaska: ");
-		
-		try {
-			return df.parse(ulaz.nextLine());
-			} catch (Exception e) {
-			
-		return new Date();//ako se ne unese dobar datum vraća tekući
-		
-		}
-	}
-		
-	public static Date unosDatuma1() {
-		SimpleDateFormat df = 
-				new SimpleDateFormat("dd.MM.yyyy.HH:mm:ss");
-		
-		
-		System.out.println("Unesite datum i vrijeme odlaska: ");
-		while(true) {
-		try {
-			return df.parse(ulaz.nextLine());
-			} catch (Exception e) {
-			
-		return new Date();
-		
-		}
-	}
-	}
+//	public static Date unosDatuma1() {
+//		SimpleDateFormat df = 
+//				new SimpleDateFormat("dd.MM.yyyy.HH:mm:ss");
+//		
+//		
+//		System.out.println("Unesite datum i vrijeme odlaska: ");
+//		while(true) {
+//		try {
+//			return df.parse(ulaz.nextLine());
+//			} catch (Exception e) {
+//			
+//		return new Date();
+//		
+//		}
+//	}
+//	}
 	
 	//unos datuma drugi način
-//	public static Date unosDatuma(String poruka, int dan, int mjesec, int godina
-//			, int sat, int minuta
-//			) {
-//		GregorianCalendar gc = (GregorianCalendar) Calendar.getInstance();
-//		gc.set(Calendar.DAY_OF_MONTH, dan);
-//		gc.set(Calendar.MONTH, mjesec-1);
-//		gc.set(Calendar.YEAR, godina);
-//		gc.set(Calendar.HOUR, sat);
-//		gc.set(Calendar.MINUTE, minuta);
-//		
-//		
-//		return gc.getTime();
-//	}
-//	
-//	
+	public static Date unosDatuma(String poruka, int dan, int mjesec, int godina
+			, int sat, int minuta
+			) {
+		GregorianCalendar gc = (GregorianCalendar) Calendar.getInstance();
+		gc.set(Calendar.DAY_OF_MONTH, dan);
+		gc.set(Calendar.MONTH, mjesec-1);
+		gc.set(Calendar.YEAR, godina);
+		gc.set(Calendar.HOUR, sat);
+		gc.set(Calendar.MINUTE, minuta);
+		
+		
+		return gc.getTime();
+	}
+	
+	
 	
 	
 	//unos brojeva

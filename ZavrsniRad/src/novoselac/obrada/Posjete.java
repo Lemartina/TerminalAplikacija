@@ -38,21 +38,24 @@ public class Posjete {
 	//test podaci
 	private void testPodaci() {
 
-//			posjete.add(new Posjeta(1, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize",
-//					new Djelatnik(1, "Ivana ", "Ivković", "93197060481", "HR7325000098193449454", "animator"), 
-//					start.getDjeca().getDjeca().subList(1, 3), 
-//					start.getUsluge().getUsluge().subList(1, 3)));
-//			
-//			posjete.add(new Posjeta(2, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize",
-//					new Djelatnik(2, "Marina ", "Marković", "26403646008", "HR5723400095351463692", "teta čuvalica"), 
-//					start.getDjeca().getDjeca().subList(1, 3), 
-//					start.getUsluge().getUsluge().subList(1, 3)));
-//			
-//			posjete.add(new Posjeta(3, Pomocno.unosDatuma(), Pomocno.unosDatuma(),"dijete grize",
-//					new Djelatnik(3, "Petar ", "Marinić", "81890337429", "HR3923600008751454128", "animator"), 
-//					start.getDjeca().getDjeca().subList(1, 3), 
-//					start.getUsluge().getUsluge().subList(1, 3)));
-//		
+			posjete.add(new Posjeta(1, Pomocno.unosDatuma("Unesite datum i vrijeme dolaska: ", 0, 0, 0, 0, 0)
+					, Pomocno.unosDatuma("Unesite datum i vrijeme odlaska: ", 0, 0, 0, 0, 0),"dijete grize",
+					new Djelatnik(1, "Ivana ", "Ivković", "93197060481", "HR7325000098193449454", "animator"), 
+					start.getDjeca().getDjeca().subList(1, 1), 
+					start.getUsluge().getUsluge().subList(1, 1)));
+			
+			posjete.add(new Posjeta(2, Pomocno.unosDatuma("Unesite datum i vrijeme dolaska: ", 0, 0, 0, 0, 0)
+					, Pomocno.unosDatuma("Unesite datum i vrijeme odolaska: ", 0, 0, 0, 0, 0),"dijete je dobro",
+					new Djelatnik(2, "Marina ", "Marković", "26403646008", "HR5723400095351463692", "teta čuvalica"), 
+					start.getDjeca().getDjeca().subList(2, 2), 
+					start.getUsluge().getUsluge().subList(2, 2)));
+			
+			posjete.add(new Posjeta(3, Pomocno.unosDatuma("Unesite datum i vrijeme dolaska: ", 0, 0, 0, 0, 0), 
+					Pomocno.unosDatuma("Unesite datum i vrijeme odolaska: ", 0, 0, 0, 0, 0),"nema napomene",
+					new Djelatnik(3, "Petar ", "Marinić", "81890337429", "HR3923600008751454128", "animator"), 
+					start.getDjeca().getDjeca().subList(3, 3), 
+					start.getUsluge().getUsluge().subList(3, 3)));
+		
 
 		
 
@@ -82,7 +85,7 @@ public class Posjete {
 			break;
 		case 3:
 				if (posjete.size() == 0) {
-					System.out.println("Nema posjete koju bi mijenjali");
+					System.out.println("Nema termina koji bi mjenjali");
 					izbornik();
 				} else {
 					promjena();
@@ -115,9 +118,9 @@ public class Posjete {
 	//case3
 private void promjena() {
 	pregled(false);
-	int rb = Pomocno.UnosBrojRaspon("Odaberite posjetu koju želite promjeniti: ", 1, posjete.size());
+	int rb = Pomocno.UnosBrojRaspon("Odaberite termin koji želite promjeniti: ", 1, posjete.size());
 	Posjeta p = posjete.get(rb - 1);
-	p.setDatumVrijemeDolaska(Pomocno.unosDatuma());
+	p.setDatumVrijemeDolaska(Pomocno.unosDatuma(null, rb, rb, rb, rb, rb));
 	
 	izbornik();
 		
@@ -126,11 +129,11 @@ private void promjena() {
 //case 2 ovo nije dobro treba unijeti datum posjete 
 private void unosNovog() {
 		Posjeta p = new Posjeta();
-		p.setDatumVrijemeDolaska(Pomocno.unosDatuma());
-		p.setDatumVrijemeOdlaska(Pomocno.unosDatuma1());
+		p.setDatumVrijemeDolaska(Pomocno.unosDatuma("Unesite datum i vrijeme dolaska: ", 0, 0, 0, 0, 0));
+		p.setDatumVrijemeOdlaska(Pomocno.unosDatuma("Unesite datum i vrijeme odolaska: ", 0, 0, 0, 0, 0));
 		p.setNapomena(Pomocno.unosTeksta("Unesite napomenu: "));
 		start.getDjelatnici().pregled(false);
-		int rb = Pomocno.UnosBrojRaspon("Odaberite djelatnika za posjetu", 1,
+		int rb = Pomocno.UnosBrojRaspon("Odaberite djelatnika za posjetu: ", 1,
 				start.getDjelatnici().getDjelatnici().size());
 		p.setDjelatnik(start.getDjelatnici().getDjelatnici().get(rb - 1));
 		
@@ -139,7 +142,7 @@ private void unosNovog() {
 		start.getUsluge().pregled(false);
 		 rb = Pomocno.UnosBrojRaspon("Odaberite uslugu za posjetu", 1,
 				start.getUsluge().getUsluge().size());
-//		p.setUsluga(start.getUsluge()).getUsluge().get(rb - 1));
+//	p.setUsluga(start.getUsluge()).getUsluge().get(rb - 1));
 		
 		while(true) {
 			

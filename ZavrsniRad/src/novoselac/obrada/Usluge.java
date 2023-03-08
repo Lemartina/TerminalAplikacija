@@ -33,8 +33,8 @@ public class Usluge {
 	// testni podaci
 	private void testPodaci() {
 		usluge.add(new Usluga(1, "Rođendan", new BigDecimal(20.00), "sat", new BigDecimal(5.00)));
-			usluge.add(new Usluga(1, "Dnevno čuvanje", new BigDecimal(10.00), "sat", new BigDecimal(1.00)));
-			usluge.add(new Usluga(1, "Tiskanje pozivnica", new BigDecimal(1.00), "kom", new BigDecimal(20.00)));
+			usluge.add(new Usluga(2, "Dnevno čuvanje", new BigDecimal(10.00), "sat", new BigDecimal(1.00)));
+			usluge.add(new Usluga(3, "Tiskanje pozivnica", new BigDecimal(1.00), "kom", new BigDecimal(20.00)));
 		
 
 	}
